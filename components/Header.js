@@ -5,6 +5,8 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useState } from 'react';
+import Link from 'next/link';
+
 
 export default function Header(){
     const [profileToggle, setProfileToggle] = useState(false);
@@ -20,7 +22,9 @@ export default function Header(){
                 <div className="flex justify-evenly pt-3  ">
                    
                         <button className="text-lg font-semibold"><SearchIcon/>Search</button>
+                        <Link legacyBehavior href ="SavedPage/Saved">
                         <button className="text-lg font-semibold"><TurnedInNotIcon/> Saved</button>
+                        </Link>
                         <button className="text-lg font-semibold"><StarRateIcon/>MyReviews</button>
                     
                         <div className=' absolute right-10 top-8'> {/** this is Profile button! */}
