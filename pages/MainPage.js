@@ -4,7 +4,7 @@
 export default function MainPage(){
     return(
 <>
-<div className=" w-full min-h-screen mx-auto py-10 ">
+<div className=" w-full min-h-screen mx-auto py-10 hover: ease-in duration-200 ">
 <div className="flex flex-col mx-auto">
        
        <h1 className="flex justify-center items-center pt-5 font-semibold text-4xl pb-10">

@@ -13,7 +13,7 @@ export default function Privacy(props){
     return(
         <>
        <Header/>
-            <div className=" w-full  pt-5 " >
+            <div className=" w-full  pt-5  " >
           <div className="pl-5">
             <img className="w-20 h-20"
              src ="/Blossend.png"
