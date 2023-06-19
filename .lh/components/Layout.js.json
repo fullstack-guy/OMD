@@ -1,0 +1,54 @@
+{
+    "sourceFile": "components/Layout.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1686727697720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686727709947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     return(\n         <>\n         <Header/>\n         {children}\n-        <main>{children}</main>\n+        ?\n         <Footer/>\n             \n         </> \n         \n"
+                },
+                {
+                    "date": 1686743542488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     return(\n         <>\n         <Header/>\n         {children}\n-        ?\n+        <main>{children}</main>\n         <Footer/>\n             \n         </> \n         \n"
+                },
+                {
+                    "date": 1686744615323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n export default function Layout({children}){\n     return(\n         <>\n         <Header/>\n-        {children}\n-        <main>{children}</main>\n+        {/* {children} */}\n+    \n         <Footer/>\n             \n         </> \n         \n"
+                },
+                {
+                    "date": 1686744621847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n export default function Layout({children}){\n     return(\n         <>\n         <Header/>\n-        {/* {children} */}\n-    \n+        {children}\n         <Footer/>\n             \n         </> \n         \n"
+                },
+                {
+                    "date": 1686744628585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         <>\n         <Header/>\n         {children}\n         <Footer/>\n-            \n+ \n         </> \n         \n     );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686744635077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n         <>\n         <Header/>\n         {children}\n         <Footer/>\n- \n         </> \n         \n     );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686744689620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n         <>\n         <Header/>\n         {children}\n         <Footer/>\n+        \n         </> \n         \n     );\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1686744704518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,13 @@\n         <>\n         <Header/>\n         {children}\n         <Footer/>\n+\n+\n+\n+\n+\n         \n         </> \n         \n     );\n"
+                },
+                {
+                    "date": 1686744754382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,8 @@\n         <>\n         <Header/>\n         {children}\n         <Footer/>\n-\n-\n-\n-\n-\n         \n         </> \n         \n     );\n"
+                }
+            ],
+            "date": 1686727697720,
+            "name": "Commit-0",
+            "content": "import Footer from \"./Footer\";\nimport Header from \"./Header\";\n\nexport default function Layout({children}){\n    return(\n        <>\n        <Header/>\n        {children}\n        <main>{children}</main>\n        <Footer/>\n            \n        </> \n        \n    );\n}"
+        }
+    ]
+}

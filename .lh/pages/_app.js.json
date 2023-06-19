@@ -1,0 +1,38 @@
+{
+    "sourceFile": "pages/_app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1686743683504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686743803067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n import '@/styles/globals.css'\n \n+import type { AppProps } from 'next/app'\n+import Layout from '../components/layout' \n \n-export default function App({ Component, pageProps }) {\n-  return <Component {...pageProps} />\n-}\n+export default function App({ Component, pageProps }: AppProps) {  \n+return (    <Layout>      \n+<Component {...pageProps} />    \n+</Layout>  )}”\n"
+                },
+                {
+                    "date": 1686743844678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n import '@/styles/globals.css'\n \n-import type { AppProps } from 'next/app'\n-import Layout from '../components/layout' \n \n-export default function App({ Component, pageProps }: AppProps) {  \n-return (    <Layout>      \n-<Component {...pageProps} />    \n-</Layout>  )}”\n+export default function App({ Component, pageProps }) {\n+  return <Component {...pageProps} />\n+}\n"
+                },
+                {
+                    "date": 1686743850358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,12 @@\n \n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n+\n+import type { AppProps } from 'next/app'\n+import Layout from '../components/layout' \n+\n+export default function App({ Component, pageProps }: AppProps) {  \n+return (    <Layout>      \n+<Component {...pageProps} />    \n+</Layout>  )}\n"
+                },
+                {
+                    "date": 1686743892873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,12 @@\n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n \n-import type { AppProps } from 'next/app'\n-import Layout from '../components/layout' \n+// import type { AppProps } from 'next/app'\n \n-export default function App({ Component, pageProps }: AppProps) {  \n-return (    <Layout>      \n-<Component {...pageProps} />    \n-</Layout>  )}\n+// import Layout from '../components/layout' \n+\n+// export default function App({ Component, pageProps }: AppProps) {  \n+// return (    <Layout>      \n+// <Component {...pageProps} />    \n+// </Layout>  )}\n"
+                },
+                {
+                    "date": 1686744597062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,5 @@\n import '@/styles/globals.css'\n \n-\n export default function App({ Component, pageProps }) {\n   return <Component {...pageProps} />\n }\n-\n-// import type { AppProps } from 'next/app'\n-\n-// import Layout from '../components/layout' \n-\n-// export default function App({ Component, pageProps }: AppProps) {  \n-// return (    <Layout>      \n-// <Component {...pageProps} />    \n-// </Layout>  )}\n"
+                }
+            ],
+            "date": 1686743683504,
+            "name": "Commit-0",
+            "content": "import '@/styles/globals.css'\n\n\nexport default function App({ Component, pageProps }) {\n  return <Component {...pageProps} />\n}\n"
+        }
+    ]
+}
