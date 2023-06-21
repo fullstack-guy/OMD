@@ -2,11 +2,13 @@
   "name": "omd_project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pablodiazt.github.io/OMD-React/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && touch out/.nojekyll && git add -f out/"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

@@ -3,9 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   exportPathMap: function () {
     return {
-      '/': { page: '/index' }, //fixing
+      '/': { page: '/index' }, 
     };
   },
+  trailingSlash: true, 
 };
+
 
 module.exports = nextConfig;
