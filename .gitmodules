@@ -1,0 +1,3 @@
+[submodule "OMD-React"]
+  path = OMD-React
+  url = https://github.com/pablodiazt/OMD-React.git
