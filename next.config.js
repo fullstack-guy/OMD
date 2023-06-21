@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   exportPathMap: function () {
     return {
-      '/': { page: '/index' },
+      '/': { page: '/index' }, //fixing
     };
   },
 };
