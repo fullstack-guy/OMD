@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '', // previous basePath is deleted -
+  exportPathMap: function () {
+    return {
+      '/': { page: '/index' }, //fixing
+    };
+  },
 };
 
 module.exports = nextConfig;
