@@ -38,9 +38,11 @@ export default function Footer(){
           <li>
             <a className="footer">Your Account</a>
           </li>
-          <li>
-            <a className="footer">Followers</a>
+          <Link legacyBehavior href="PrivacyPage/TermsandConditions">
+          <li className="hover:underline hover:py-3 hover:font-semibold duration-300 ease-in">
+            <a className="footer">Terms and Conditions</a>
           </li>
+          </Link>
           <Link legacyBehavior href="PrivacyPage/Privacy">
           <li className="hover:underline hover:py-3 hover:font-semibold duration-300 ease-in">
             <a className="footer">Our Privacy</a>
