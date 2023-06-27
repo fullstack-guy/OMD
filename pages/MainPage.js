@@ -3,8 +3,7 @@
 
 export default function MainPage(){
     return(
-<<<<<<< Updated upstream
-<>
+
 <div className=" w-full min-h-screen mx-auto py-10 hover: ease-in duration-200 ">
 <div className="flex flex-col mx-auto">
        
@@ -16,7 +15,7 @@ export default function MainPage(){
         @@@Content get inside@@@@
        
 =======
-        <>   
+        </div>   
             <div className="w-full min-h-screen mx-auto py-0 px-0 bg-primary-canvas-color">
                 <div className="flex flex-col mx-auto bg-yellow-200 px-1 ">
                     <div className="py-1">
@@ -245,8 +244,8 @@ export default function MainPage(){
                     </div>
                 </div>
             </div>
-
-        </>
+</div>
+       </div>
 
     );
 }
