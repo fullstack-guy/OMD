@@ -6,7 +6,7 @@ export default function SavedPageCard(props){
     const [isClicked, setIsClicked] =useState(true);
     return(
         <>
-        <div className="border-2 rounded-lg shadow-md overflow-hidden border-slate-700 py-10">
+        <div className="border-2 rounded-lg shadow-lg overflow-hidden py-10">
             <div className="flex justify-between">
                 <div className="flex flex-col w-1/2">
                         <div className="pl-8">
