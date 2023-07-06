@@ -17,17 +17,20 @@ export default function Header(){
         <>
         <div className="border-2 py-4 bg-green-500  rounded-lg overflow-hidden">
             <div className="flex flex-col place-content-center">
+                <Link legacyBehavior href="/"> 
                 <h1 className=' text-2xl font-extrabold text-blue-900 mx-auto'>
                     Open my Doctor
                 </h1>
+                </Link>
                 <div className="flex justify-evenly pt-3  ">
-                   
+                        {/**here you guys can link each pages */}
                         <button className="text-lg font-semibold"><SearchIcon/>Search</button>
                         <Link legacyBehavior href ="SavedPage/Saved">
                         <button className="text-lg font-semibold"><TurnedInNotIcon/> Saved</button>
                         </Link>
+                        <Link legacyBehavior href="ReviewingPage/Review">
                         <button className="text-lg font-semibold"><StarRateIcon/>MyReviews</button>
-                    
+                        </Link>
                         <div className=' absolute right-10 top-8'> {/** this is Profile button! */}
                                 <button tpye = "button"
                                 className='bg-gray-800 flex text-sm rounded-full  focus:outline-none
