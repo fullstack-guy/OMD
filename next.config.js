@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
- 
-  trailingSlash: true, 
+
+
+const nextConfig   = {
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
+  assetPrefix: './',
 };
 
 
