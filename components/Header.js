@@ -25,11 +25,11 @@ export default function Header(){
                 <div className="flex justify-evenly pt-3  ">
                         {/**here you guys can link each pages */}
                         <button className="text-lg font-semibold"><SearchIcon/>Search</button>
-                        <Link legacyBehavior href ="SavedPage/Saved">
-                        <button className="text-lg font-semibold"><TurnedInNotIcon/> Saved</button>
+                        <Link  href ="/SavedPage/Saved " legacyBehavior>
+                        <a className="text-lg font-semibold"><TurnedInNotIcon/> Saved</a>
                         </Link>
-                        <Link legacyBehavior href="ReviewingPage/Review">
-                        <button className="text-lg font-semibold"><StarRateIcon/>MyReviews</button>
+                        <Link  href="/ReviewingPage/Review" legacyBehavior>
+                        <a className="text-lg font-semibold"><StarRateIcon/>MyReviews</a>
                         </Link>
                         <div className=' absolute right-10 top-8'> {/** this is Profile button! */}
                                 <button tpye = "button"
