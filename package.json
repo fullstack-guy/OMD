@@ -8,10 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next export && touch out/.nojekyll && echo 'https://pablodiazt.github.io/OMD-React/' > out/CNAME && git add -f out/ && git commit -m 'Deploy' && git push origin main"
+    "deploy": "gh-pages -b main -d build"
   },
-  
-  
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
