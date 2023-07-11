@@ -5,12 +5,10 @@
   "homepage": "https://pablodiazt.github.io/OMD-React/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-
-    "deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && npx gh-pages -d out"
-
+    "deploy": "next build && touch out/.nojekyll && git add -f out/ && npx gh-pages -d out"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
