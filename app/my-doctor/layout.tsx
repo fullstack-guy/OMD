@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Header } from './header';
 
  const metadata: Metadata = {
     title: 'Create Next App',
@@ -10,7 +11,7 @@ import type { Metadata } from 'next'
   }) {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <div className="container">{children}</div>
     </div>
   );
