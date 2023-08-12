@@ -5,13 +5,29 @@ const Header = () => {
     <div>
       <nav className="bg-gray-800">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
-            <div className="absolute inset-y-0 right-0 w-full flex  justify-between items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <div className="w-4/5 flex flex-col items-center justify-between">
-                <h1>Open My Doctor</h1>
-                <div>
-                  <Link href="/">Saved</Link>
-                  <Link href="/">Reviews</Link>
+          <div className="relative flex items-center justify-between">
+            <div className="absolute inset-y-0 right-0 w-full flex  justify-between items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 p">
+              <div className="w-4/5 flex flex-col items-center justify-between pt-4 pb-3">
+                <Link href="/my-doctor">
+                  {' '}
+                  <h1 className="text-4xl font-bold tracking-tight text-white sm:text-4xl">
+                    Open My Doctor
+                  </h1>{' '}
+                </Link>
+
+                <div className="pt-4">
+                  <Link
+                    href="/my-doctor/saved-doctors"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lm font-medium mr-12"
+                  >
+                    Saved
+                  </Link>
+                  <Link
+                    href="/my-doctor/review"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-md font-medium"
+                  >
+                    Reviews
+                  </Link>
                 </div>
               </div>
               <div className="relative ml-3 w-1/5">
