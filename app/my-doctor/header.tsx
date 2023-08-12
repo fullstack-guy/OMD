@@ -9,10 +9,9 @@ const Header = () => {
             <div className="absolute inset-y-0 right-0 w-full flex  justify-between items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 p">
               <div className="w-4/5 flex flex-col items-center justify-between pt-4 pb-3">
                 <Link href="/my-doctor">
-                  {' '}
                   <h1 className="text-4xl font-bold tracking-tight text-white sm:text-4xl">
                     Open My Doctor
-                  </h1>{' '}
+                  </h1>
                 </Link>
 
                 <div className="pt-4">
