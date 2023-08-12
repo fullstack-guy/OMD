@@ -53,35 +53,22 @@ const Header = () => {
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu-button"
-                  tabindex="-1"
                 >
-                  <a
-                    href="#"
+                  <Link
+                    href="/my-doctor/account"
                     className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
-                    tabindex="-1"
-                    id="user-menu-item-0"
                   >
-                    Your Profile
-                  </a>
-                  <a
-                    href="#"
+                    My Account
+                  </Link>
+
+                  <Link
+                    href="/login"
                     className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
-                    tabindex="-1"
-                    id="user-menu-item-1"
-                  >
-                    Settings
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700"
-                    role="menuitem"
-                    tabindex="-1"
-                    id="user-menu-item-2"
                   >
                     Sign out
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
