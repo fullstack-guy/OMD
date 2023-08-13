@@ -16,6 +16,11 @@ const Header = () => {
 
                 <div className="pt-4">
                   <Link
+                  href ="/my-doctor/search"
+                  className='text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lm font-medium mr-12'>
+                  Search
+                  </Link>
+                  <Link
                     href="/my-doctor/saved-doctors"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lm font-medium mr-12"
                   >
@@ -67,6 +72,22 @@ const Header = () => {
                     role="menuitem"
                   >
                     Sign out
+                  </Link>
+
+                  <Link
+                    href="/my-doctor/privacy"
+                    className="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                  >
+                    privacy
+                  </Link>
+
+                  <Link
+                    href="/my-doctor/term"
+                    className="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                  >
+                    term
                   </Link>
                 </div>
               </div>
