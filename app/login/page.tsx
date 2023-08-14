@@ -1,4 +1,6 @@
 'use client'
+import { useMutation } from '@tanstack/react-query'
+import axios from 'axios'
 import Link from 'next/link'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
@@ -17,7 +19,16 @@ const SignIn = () => {
     formState: { errors },
   } = useForm<Inputs>({ defaultValues })
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const mutation = useMutation({
+    mutationFn: (data: any) => {
+      return axios.post('http://3.21.254.150/api-token-auth', data)
+    },
+  })
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    mutation.mutate(defaultValues)
+    console.log(mutation)
+  }
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
