@@ -1,6 +1,8 @@
 'use client'
+import { useMutation } from '@tanstack/react-query'
 import Link from 'next/link'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import axios from 'axios'
 
 type Inputs = any
 
@@ -10,7 +12,7 @@ const defaultValues = {
   username: 'johnjoseph',
   email: 'john@example.com',
   password: 'abc12345',
-  confirm_password: 'abc12345',
+  // confirm_password: 'abc12345',
 }
 
 const SignUp = () => {
@@ -21,7 +23,15 @@ const SignUp = () => {
     formState: { errors },
   } = useForm<Inputs>({ defaultValues })
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const mutation = useMutation({
+    mutationFn: (data: any) => {
+      return axios.post('http://3.21.254.150/user', data)
+    },
+  })
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    mutation.mutate(defaultValues)
+    console.log(mutation)
+  }
 
   return (
     <>
@@ -142,7 +152,7 @@ const SignUp = () => {
                     id="confirm-password"
                     type="confirm-password"
                     autoComplete="current-confirm-password"
-                    {...register('confirm-password', { required: true })}
+                    {...register('confirm-password')}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2"
                   />
                 </div>
