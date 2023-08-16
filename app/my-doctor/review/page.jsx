@@ -65,7 +65,7 @@ export default function Review(){
         <>
      
         
-        <div className="grid grid-cols-1 md:grid-cols-2  w-full px-10 lg:px-20  space-x-10 lg:space-x-20">
+        <div className="grid grid-cols-1 md:grid-cols-2  w-full px-10 lg:px-20  space-x-10 lg:space-x-20 container">
             <div className=" pt-10 w-full space-y-10">
                 <div className=" border-2 border-slate-400 py-5 bg-slate-400 rounded-lg shadow-lg">
                     <div className="flex items-center justify-between px-2">

@@ -8,7 +8,7 @@ export default function SearchDoctor(){
     
     return(
 
-<div className=" w-full min-h-screen mx-auto">
+<div className=" w-full min-h-screen mx-auto container">
     <div className="flex flex-col mx-auto">
        
                                     

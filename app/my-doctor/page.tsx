@@ -2,7 +2,7 @@
 
 export default function MyDoctor() {
   return (
-    <div className="flex min-h-screen flex-col items-center">
+    <div className="flex min-h-screen flex-col items-center container">
       <h1 className = "text-xl lg:text-3xl font-bold mt-10">About Blossend</h1>
 
       <p className = "leading-10 mt-10 w-3/4">

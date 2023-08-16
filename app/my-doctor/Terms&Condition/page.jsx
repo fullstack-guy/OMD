@@ -6,7 +6,7 @@ export default function TermsandConditions(){
     return(
         <>
        
-       <div className="pt-10 w-full">
+       <div className="pt-10 w-full container">
          <div className="mx-auto w-2/3">
          <h1 className="py-5 text-3xl font-semibold">Terms and Conditions</h1>
                 <div className=" leading-relaxed">
