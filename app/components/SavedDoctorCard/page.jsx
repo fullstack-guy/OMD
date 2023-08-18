@@ -4,14 +4,62 @@
 import TurnedInNotIcon from '@mui/icons-material/TurnedInNot';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import StarRateIcon from '@mui/icons-material/StarRate';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
-
+//book mark function added!
 
 
     export default function SavedPageCard(props){
-        const [isClicked, setIsClicked] =useState(true);
+      
+        const [isBookmarked, setIsBookmarked] =useState(false);
+
+        
+
+        
+          const toggleBookmark = async ( ) => {
+            await handleSubmit(String(props.npi));
+            setIsBookmarked(!isBookmarked);
+            console.log(props.npi);
+          };
+
+          const handleSubmit = async ( npi) => {
+            const finalformdata ={
+              
+              patient : 'Jay',
+              dr: String(npi),
+            };
+
+            const JSONdata = JSON.stringify(finalformdata);
+            console.log(finalformdata);
+
+            const endpoint =`http://3.21.254.150/bookmarkDoctors/`;
+            const options = {
+              method: "POST",
+              headers : {
+                Accept: "application/json",
+                "Content-type" : "application/json; charset=UTF-8", 
+              },
+                body: JSONdata,
+              };
+              try {
+                const response = await fetch(endpoint, options);
+                const result = await response.json();
+
+                  if(result.message == "bookmarkDoctors created correctly") {
+                    console.log(result);
+                    alert("Bookmark saved!")
+
+                  }else{
+                    alert(result.message);
+                  }
+              } catch(error) {
+                alert(error);
+              }
+            }
+  
+         
+
         return(
             <>
             <div className="border-2 rounded-lg shadow-lg overflow-hidden py-5">
@@ -21,7 +69,7 @@ import { useState } from 'react';
                             <img 
                             className="w-full h-full rounded-lg  xl:w-3/4 overflow-hidden"
                             alt="Doctor Picture"
-                            src ="/ProfilePicture/unknown4.jpg"
+                            src ="/userPic.jpg"
                             />
                         </div>
                     <div className="flex flex-col pt-5   pl-12">
@@ -32,9 +80,9 @@ import { useState } from 'react';
             <div className="flex flex-col w-1/2">
                     <div className='flex justify-between'>
                         <h1 className="text-2xl xl:text-3xl font-bold text-blue-600">DR. {props.Name}</h1>
-                        <button onClick={() => setIsClicked(!isClicked)}
+                        <button onClick={toggleBookmark}
                         className='pr-5 scale-150'> 
-                        {isClicked? 
+                        {isBookmarked? 
                         <div className=' text-blue-500'><BookmarkIcon/></div>
                         :
                         <div className='text-blue-500'>

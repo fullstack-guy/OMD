@@ -1,6 +1,7 @@
 
 import SavedPageCard from "@/app/components/SavedDoctorCard/page"
 import { use } from 'react';
+
 //const API_NEW = process.env.API_KEY;
 
 export default function Saved(){
@@ -17,6 +18,9 @@ export default function Saved(){
                 key = {index}
                 Name = {post.firstName}
                 Job = {post.primarySpecialty}
+                npi={String(post.npi)}
+                id = {post.internal_id}
+
                 
                 />
             ))}

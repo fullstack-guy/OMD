@@ -72,7 +72,7 @@ export default function Review(){
 
                         <div className="grid grid-flow-col gap-10">
                         <img alt="doctor"
-                        src="/ProfilePicture/unknown4.jpg"
+                        src="/userPic.jpg"
                         className="ml-5 w-full h-full md:w-28 md:h-28 rounded-md"/>
                         <div>
                         <h1 className="text-lg lg:text-xl font-extrabold ">Doctor Name</h1>
