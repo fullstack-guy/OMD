@@ -6,7 +6,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import StarRateIcon from '@mui/icons-material/StarRate';
 import React, { useState, useEffect } from 'react';
 
-
+const BOOKMARKKEY = process.env.BOOKMARK_KEY;
 //book mark function added!
 
 
