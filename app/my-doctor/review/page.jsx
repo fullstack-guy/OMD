@@ -208,7 +208,7 @@ export default function Review(){
                              max={10}
                              className="w-2/3 mx-auto"
                              sx={{
-                                color: 'black', // 슬라이더의 색상을 검은색으로 변경
+                                color: 'black', 
                               }}
                              
                             />
@@ -386,3 +386,4 @@ export default function Review(){
         </>
     );
 }
+

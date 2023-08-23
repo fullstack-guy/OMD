@@ -135,6 +135,9 @@ Please read these terms and conditions carefully before using Our Service.
                     
       
         </div>
+
+
         </>
     );
 }
+
