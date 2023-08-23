@@ -33,7 +33,7 @@ const BOOKMARKKEY = process.env.BOOKMARK_KEY;
             const JSONdata = JSON.stringify(finalformdata);
             console.log(finalformdata);
 
-            const endpoint =`http://3.21.254.150/bookmarkDoctors/`;
+            const endpoint =BOOKMARKKEY;
             const options = {
               method: "POST",
               headers : {
@@ -111,3 +111,5 @@ const BOOKMARKKEY = process.env.BOOKMARK_KEY;
             </>
         );
     }
+
+    

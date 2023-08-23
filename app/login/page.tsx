@@ -4,7 +4,11 @@ import axios from 'axios'
 import Link from 'next/link'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
-type Inputs = any
+type Inputs = {
+  email: string;
+  password: string;
+};
+const API_LOGIN = process.env.REACT_APP_LOGIN_KEY;
 
 const defaultValues = {
   email: 'john@example.com',
@@ -20,14 +24,14 @@ const SignIn = () => {
   } = useForm<Inputs>({ defaultValues })
 
   const mutation = useMutation({
-    mutationFn: (data: any) => {
-      return axios.post('http://3.21.254.150/api-token-auth', data)
+    mutationFn: (data: Inputs) => {
+      return axios.post("", data)
     },
   })
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     mutation.mutate(defaultValues)
-    console.log(mutation)
+   
   }
   return (
     <>
@@ -104,3 +108,4 @@ const SignIn = () => {
 }
 
 export default SignIn
+

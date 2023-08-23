@@ -5,6 +5,7 @@ import { useForm, SubmitHandler } from 'react-hook-form'
 import axios from 'axios'
 
 type Inputs = any
+const KEY = process.env.REACT_APP_SIGNUP_KEY;
 
 const defaultValues = {
   first_name: 'John',
@@ -25,12 +26,12 @@ const SignUp = () => {
 
   const mutation = useMutation({
     mutationFn: (data: any) => {
-      return axios.post('http://3.21.254.150/user', data)
+      return axios.post("", data)
     },
   })
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     mutation.mutate(defaultValues)
-    console.log(mutation)
+    
   }
 
   return (
@@ -186,3 +187,4 @@ const SignUp = () => {
 }
 
 export default SignUp
+
