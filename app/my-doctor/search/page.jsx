@@ -1,5 +1,5 @@
 
-import SavedPageCard from "@/app/components/SavedDoctorCard/page";
+import SavedPageCard from "@/components/SavedPageCard";
 
 
 

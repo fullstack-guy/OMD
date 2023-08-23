@@ -1,5 +1,5 @@
 
-import SavedPageCard from "@/app/components/SavedDoctorCard/page"
+import SavedPageCard from "@/components/SavedPageCard"
 import { use } from 'react';
 
 //const API_NEW = process.env.API_KEY;

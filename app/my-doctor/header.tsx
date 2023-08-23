@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import UserProfileNav from '@/app/components/userProfileNav/page'
+import UserProfileNav from '@/components/UserProfileNav'
+
 const Header = () => {
   return (
     <div className=" py-4 bg-gray-800  overflow-hidden">
