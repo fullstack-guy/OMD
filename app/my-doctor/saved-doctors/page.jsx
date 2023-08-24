@@ -1,19 +1,20 @@
 
-import SavedPageCard from "@/components/SavedPageCard"
-import { use } from 'react';
+import SavedPageCard from "@/components/SavedPageCard";
 
-//const API_NEW = process.env.API_KEY;
 
- function Saved(){
-    var api = use(ApiFetch());
-    return(
-        <div className="container">
-       
-       
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-6  " >
-          
-
-         {api.results.map((post, index) => (
+export default function Saved({ data }) {
+ if(!data){
+    return( 
+        <div className="">
+            loading....
+        </div>
+    )
+ }
+   
+  return (
+    <div className="container">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-6">
+        {data?.results?.map((post, index) => (
           <SavedPageCard
             key={index}
             Name={post.firstName}
@@ -22,19 +23,29 @@ import { use } from 'react';
             id={post.internal_id}
           />
         ))}
-         </div>
-        
-         </div>
-    );
+      </div>
+    </div>
+  );
 }
-export async function ApiFetch(){
-    const API_NEW_KEY = process.env.API_KEY;
 
-     const res = await fetch(API_NEW_KEY); //deleted no cache store option
-
-     const data = await res.json()
-     return data
-} 
-
-export default Saved
-
+export async function getServerSideProps() {
+    try {
+      const API_DOCTOR = process.env.API_KEY;
+     
+      const res = await fetch(API_DOCTOR);
+      const data = await res.json();
+  
+      return {
+        props: {
+          data,
+        },
+      };
+    } catch (error) {
+      console.error("Error fetching API data:", error);
+      return {
+        props: {
+          data: null,
+        },
+      };
+    }
+  }
