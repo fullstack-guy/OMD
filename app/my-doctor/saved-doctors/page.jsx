@@ -5,7 +5,7 @@ import { use } from 'react';
 //const API_NEW = process.env.API_KEY;
 
 export default function Saved(){
-   var api = use(ApiFetch());
+    var api = use(ApiFetch());
     return(
         <div className="container">
        
@@ -32,7 +32,7 @@ export default function Saved(){
 export async function ApiFetch(){
     const API_NEW_KEY = process.env.API_KEY;
 
-     const res = await fetch(API_NEW_KEY, {cache: 'no-store'});
+     const res = await fetch(API_NEW_KEY); //deleted no cache store option
 
      const data = await res.json()
      return data
