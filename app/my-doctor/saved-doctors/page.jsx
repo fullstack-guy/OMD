@@ -4,7 +4,7 @@ import { use } from 'react';
 
 //const API_NEW = process.env.API_KEY;
 
-export default function Saved(){
+ function Saved(){
     var api = use(ApiFetch());
     return(
         <div className="container">
@@ -13,17 +13,15 @@ export default function Saved(){
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-6  " >
           
 
-            {api.results.map((post, index) => (
-                <SavedPageCard 
-                key = {index}
-                Name = {post.firstName}
-                Job = {post.primarySpecialty}
-                npi={String(post.npi)}
-                id = {post.internal_id}
-
-                
-                />
-            ))}
+         {api.results.map((post, index) => (
+          <SavedPageCard
+            key={index}
+            Name={post.firstName}
+            Job={post.primarySpecialty}
+            npi={String(post.npi)}
+            id={post.internal_id}
+          />
+        ))}
          </div>
         
          </div>
@@ -38,4 +36,5 @@ export async function ApiFetch(){
      return data
 } 
 
+export default Saved
 
