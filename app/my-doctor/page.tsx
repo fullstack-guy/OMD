@@ -15,4 +15,5 @@ export default function MyDoctor() {
   )
 }
 
-
+// this will be the search page and main page.  SO take out all the folders from my-doctor and
+// and erase the layout inside of my-doctor. this app layout will cover header and footer, 

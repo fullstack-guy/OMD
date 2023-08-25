@@ -36,11 +36,11 @@ export default function UserProfileNav(){
                     className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                   >
-                    Sign out
+                    Sign in
             </Link>
 
             <Link
-            href="/my-doctor/privacy"
+            href="/privacy"
             className="block px-4 py-2 text-sm text-gray-700"
             role="menuitem"
             >
@@ -48,7 +48,7 @@ export default function UserProfileNav(){
             </Link>
 
             <Link
-            href="/my-doctor/Terms&Condition"
+            href="/Terms&Condition"
             className="block px-4 py-2 text-sm text-gray-700"
             role="menuitem"
             >
