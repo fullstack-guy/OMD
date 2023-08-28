@@ -1,3 +1,5 @@
+
+
 import Link from 'next/link'
 import UserProfileNav from '@/components/UserProfileNav'
 
@@ -20,9 +22,10 @@ const Header = () => {
                         <a className="text-lg font-semibold text-white  hover:bg-gray-700 hover:text-white px-3 rounded-lg duration-300"> Saved</a>
                         </Link>
 
-                        <Link  href="/review" legacyBehavior>
+                          {/**<Link  href="/review" legacyBehavior>
                         <a className="text-lg font-semibold text-white  hover:bg-gray-700 hover:text-white px-3 rounded-lg duration-300">MyReviews</a>
-                        </Link>
+                        </Link> */}
+                        
 
               <div className=' absolute right-10 top-8'>
                 <div>

@@ -23,6 +23,16 @@ export default function UserProfileNav(){
         <div className ={` ${ profileToggle ? "" : "hidden"}
         origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white
         ring-1 ring-black ring-opacity-5 focus:outline-none`}>
+
+            <Link
+                    href="/review"
+                    className="block px-4 py-2 text-sm text-gray-700"
+                    role="menuitem"
+                  >
+                   MyReview
+            </Link>
+
+
                     <Link
                 href="/my-doctor/account"
                 className="block px-4 py-2 text-sm text-gray-700"
@@ -36,10 +46,9 @@ export default function UserProfileNav(){
                     className="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                   >
-                    Sign in
+                    Sign out // need to be fixed as sign out
             </Link>
-
-            <Link
+{/**    <Link
             href="/privacy"
             className="block px-4 py-2 text-sm text-gray-700"
             role="menuitem"
@@ -53,7 +62,8 @@ export default function UserProfileNav(){
             role="menuitem"
             >
             Terms & Condition
-            </Link>
+            </Link> */}
+        
     </div>
 </div>
 
